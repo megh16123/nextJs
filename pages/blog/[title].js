@@ -1,18 +1,36 @@
 import {React,useState} from 'react';
-import {useRouter} from 'next/router';
-
 import blogs from './blog.json';
+import Navbar from '../../components/Navbar';
 
-function title() {
-const router = useRouter();
-const {title} = router.query;
+export const getStaticPaths = ()=>{
+    const paths = blogs.map((curElem)=>{
+        return {
+            params:{
+                title:curElem.title,               
+            }
+        }
+    })
+    return{
+        paths,
+        fallback:false
+    }
+}
 
-
-    return (<>
-
-    <h1>{title}</h1>
-    <h2>{}</h2>
-    <p>{}</p>
+export const getStaticProps = (context)=>{
+const {title} = context.params;
+const data = blogs.filter(elem=>elem.title==title)
+    return {
+    props:{
+        data
+    }
+}
+}
+function title({data}) {
+ return (<>
+<Navbar title={data[0].title}/>
+    <h1>{data[0].title}</h1>
+    <h2>{data[0].heading}</h2>
+    <p>{data[0].subheading}</p>
     </>);
 }
 

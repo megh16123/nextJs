@@ -1,7 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
+import Navbar from '../components/Navbar';
+
 export default function about() {
-  return <div> <Head>
-  <title>About</title>
-</Head>About</div>;
+  return (<>
+  <Navbar title="About"/>
+  <h1>About</h1>
+  </>)
 }

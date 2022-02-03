@@ -1,23 +1,8 @@
-import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import axios from 'axios';
 import { useState } from 'react';
-import Link from 'next/link';
+import Navbar from '../components/Navbar';
 
-const Navbar=()=>{
-  return (<>
-  <Head>
-    <title>Main</title>
-  </Head>
-  <navbar className={styles.navbar}>
-   
-          <Link  href="/Home">Home</Link>
-          <Link  href="/about">About</Link>
-          <Link  href="/blog">Blogs</Link>
-    
-  </navbar>
-  </>);
-}
 export default function Home() {
   const [dat,setDat] = useState({name:"",email:"",age:0});
   const [reqD,setDet] = useState();
@@ -33,7 +18,7 @@ export default function Home() {
   }
   return (
    <>
-   <Navbar/>
+   <Navbar title="Main"/>
    <div className={styles.grouper}>
 
    <input type="text" value={reqD} onInput={handleInput}/>
