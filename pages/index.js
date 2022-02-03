@@ -6,10 +6,14 @@ import { useState } from 'react'
 import Link from 'next/link'
 const Navbar=()=>{
   return (<>
+  <Head>
+    <title>Main</title>
+  </Head>
   <navbar className={styles.navbar}>
    
-          <Link  href="/home">Home</Link>
+          <Link  href="/Home">Home</Link>
           <Link  href="/about">About</Link>
+          <Link  href="/blog">Blogs</Link>
     
   </navbar>
   </>);
@@ -18,7 +22,7 @@ export default function Home() {
   const [dat,setDat] = useState({name:"",email:"",age:0});
   const [reqD,setDet] = useState();
   const getter = ()=>{
-    axios.get('./api/hello',{params:{namer:reqD}}).then((resp)=>{
+    axios.get('./api/hello',{params:{namer:reqD.toLowerCase()}}).then((resp)=>{
       setDat(...resp.data)
       setDet("");
     });

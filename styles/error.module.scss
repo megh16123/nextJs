@@ -1,0 +1,25 @@
+.mainDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 2rem;
+}
+#button{
+  padding: 1rem;
+  background-color: blueviolet;
+  color: white;
+  border: silver solid;
+  font-weight: 500;
+  transform: translateX(107%) translateY(10%);
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  box-shadow: .1rem .1rem  1rem 0 white;
+  z-index: 200;
+  transition: all .5s;
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(173, 127, 216);
+    color: white;  
+  }
+}
