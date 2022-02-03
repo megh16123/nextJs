@@ -1,5 +1,4 @@
 import estyle from '../styles/error.module.scss';
-import Head from 'next/head'
 import { useEffect } from 'react';
 import {useRouter} from 'next/router';
 import Navbar from '../components/Navbar';
@@ -11,7 +10,7 @@ const Error = () => {
     useEffect(()=>{
         setTimeout(handleRedirect,3000)
        
-    },[]);
+    });
   return <>
   <Navbar title="Error"/>
   <div className={estyle.mainDiv}>

@@ -7,7 +7,7 @@ function Menu() {
   return (<>
   <Navbar title="Blogs"/>
   <div className={bstyles.links}>
-      {data.map((blog)=>{return(<Link href={`blog/${blog.title}`}>{blog.title}</Link>)})}
+      {data.map((blog)=>{return(<Link key={blog.title} href={`blog/${blog.title}`}>{blog.title}</Link>)})}
   </div>
   </>);
 }
