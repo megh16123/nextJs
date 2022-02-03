@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
-import axios from 'axios'
-import { useState } from 'react'
-import Link from 'next/link'
+import Head from 'next/head';
+import styles from '../styles/Home.module.scss';
+import axios from 'axios';
+import { useState } from 'react';
+import Link from 'next/link';
+
 const Navbar=()=>{
   return (<>
   <Head>
