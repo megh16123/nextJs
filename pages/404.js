@@ -14,7 +14,7 @@ const Error = () => {
   return <>
   <Navbar title="Error"/>
   <div className={estyle.mainDiv}>
-<h1>404|| Not Found</h1>
+<h1>404--- Not Found</h1>
 <button id={estyle.button} onClick={handleRedirect}>Go To Home Page</button>
   </div>
   </>;
